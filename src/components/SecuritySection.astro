@@ -2,13 +2,16 @@
 
 ---
 
-<section class="relative bg-navy-blue text-white py-20 px-4 overflow-hidden">
+<section
+  class="relative bg-navy-blue text-white py-20 px-4 overflow-hidden h-[50vh] flex items-center justify-center"
+>
   {/* Background Image of Server Room */}
-  <img
-    src="/assets/server-room.jpg"
-    alt="Server room with data security"
-    class="absolute inset-0 w-full h-full object-cover opacity-30"
-  />
+  <div
+    class="absolute inset-0 z-0 bg-fixed bg-cover"
+    style="background-image: url('/assets/server-room.jpg'); background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  </div>
 
   <div class="relative z-10 container mx-auto text-center">
     {/* Text Content */}
@@ -65,6 +68,3 @@
     }
   }
 </style>
-
-} }
-
