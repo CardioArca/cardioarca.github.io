@@ -4,7 +4,9 @@ module.exports = {
     "./src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte,mdx}",
     "./components/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte,mdx}",
     "./pages/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte,mdx}",
+    "./node_modules/shadcn-ui-react-accordion/dist/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
@@ -21,5 +23,5 @@ module.exports = {
       },
     },
   },
-  plugins: [], // Ensure this is empty as PostCSS plugins are handled in postcss.config.cjs
+  plugins: [require("tailwindcss-animate")],
 };

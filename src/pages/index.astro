@@ -10,6 +10,7 @@ import TestimonialsSection from "../components/TestimonialsSection.astro"; // Im
 import SecuritySection from "../components/SecuritySection.astro"; // Import the new component
 import CallToActionSection from "../components/CallToActionSection.astro"; // Import the new component
 import Footer from "../components/Footer.astro"; // Import the new component
+import FAQSection from "../components/FAQSection.jsx"; // Import the new FAQ component
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -43,7 +44,8 @@ import Footer from "../components/Footer.astro"; // Import the new component
       <SecuritySection class="mb-16" />
       {/* Add the security section */}
       <CallToActionSection class="mb-16" />
-      {/* Add the call to action section */}
+      <FAQSection client:load />
+      {/* Add the FAQ section */}
     </main>
     <Footer />
     {/* Add the footer section */}
