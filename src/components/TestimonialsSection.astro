@@ -1,52 +1,79 @@
 ---
 const testimonials = [
   {
-    photo: "https://www.future-doctor.de/wp-content/uploads/2024/08/shutterstock_2480850611.jpg", // Placeholder image
+    photo:
+      "https://www.future-doctor.de/wp-content/uploads/2024/08/shutterstock_2480850611.jpg", // Placeholder image
     name: "Jane Doe",
     role: "Patient",
-    quote: "The EMR system has revolutionized how I manage my health. It’s incredibly user-friendly and keeps all my records in one secure place."
+    quote:
+      "The EMR system has revolutionized how I manage my health. It’s incredibly user-friendly and keeps all my records in one secure place.",
   },
   {
-    photo: "https://www.future-doctor.de/wp-content/uploads/2024/08/shutterstock_2480850611.jpg", // Placeholder image
+    photo:
+      "https://www.future-doctor.de/wp-content/uploads/2024/08/shutterstock_2480850611.jpg", // Placeholder image
     name: "Dr. John Smith",
     role: "Healthcare Provider",
-    quote: "Interoperability is key in modern healthcare, and this EMR system excels at seamless data sharing. It truly enhances patient care."
+    quote:
+      "Interoperability is key in modern healthcare, and this EMR system excels at seamless data sharing. It truly enhances patient care.",
   },
   {
-    photo: "https://www.future-doctor.de/wp-content/uploads/2024/08/shutterstock_2480850611.jpg", // Placeholder image
+    photo:
+      "https://www.future-doctor.de/wp-content/uploads/2024/08/shutterstock_2480850611.jpg", // Placeholder image
     name: "Sarah Chen",
     role: "Administrator",
-    quote: "Managing appointments and patient data has never been easier. The intuitive interface and robust features save us so much time."
-  }
+    quote:
+      "Managing appointments and patient data has never been easier. The intuitive interface and robust features save us so much time.",
+  },
 ];
 ---
 
-<section class="relative py-16 px-4 bg-white overflow-hidden">
-  <div class="absolute inset-0 z-0">
+<section class="relative px-4 bg-white overflow-hidden">
+  <!-- <div class="absolute inset-0 z-0">
     {/* Background images with reduced opacity */}
-    <img src="/public/patient-provider-interaction.jpg" alt="Patient provider interaction" class="absolute inset-0 w-full h-full object-cover opacity-20" />
-    {/* Accent Blue gradient overlay */}
-    <div class="absolute inset-0 bg-gradient-to-t from-white to-accent-blue-transparent opacity-50"></div>
-  </div>
-
-  <div class="relative z-10 container mx-auto">
-    <h2 class="text-center text-4xl font-bold text-gray-800 mb-12">What Our Users Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {testimonials.map(testimonial => (
-        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center animate-fade-in-up transition-all duration-300 hover:shadow-xl hover:scale-105">
-          <img src={testimonial.photo} alt={testimonial.name} class="w-24 h-24 rounded-full object-cover mb-4" /> {/* Circular Profile Photo */}
-          <h3 class="text-xl font-bold text-gray-800">{testimonial.name}</h3> {/* Name */}
-          <p class="text-gray-600 mb-4">{testimonial.role}</p> {/* Role */}
-          <p class="italic text-gray-700 text-lg">"{testimonial.quote}"</p> {/* Testimonial Text */}
-        </div>
-      ))}
-    </div>
-  </div>
+    <img
+      src="/public/patient-provider-interaction.jpg"
+      alt="Patient provider interaction"
+      class="absolute inset-0 w-full h-full object-cover opacity-20"
+    /> -->
+  {/* Accent Blue gradient overlay */}
+  <div class="absolute inset-0"></div>
 </section>
+
+<div class="relative z-10 container mx-auto mb-12">
+  <h2 class="text-center text-4xl font-bold text-gray-800 mb-12">
+    What Our Users Say
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {
+      testimonials.map((testimonial) => (
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center animate-fade-in-up transition-all duration-300 hover:shadow-xl hover:scale-105">
+          <img
+            src={testimonial.photo}
+            alt={testimonial.name}
+            class="w-24 h-24 rounded-full object-cover mb-4"
+          />{" "}
+          {/* Circular Profile Photo */}
+          <h3 class="text-xl font-bold text-gray-800">
+            {testimonial.name}
+          </h3>{" "}
+          {/* Name */}
+          <p class="text-gray-600 mb-4">{testimonial.role}</p> {/* Role */}
+          <p class="italic text-gray-700 text-lg">"{testimonial.quote}"</p>{" "}
+          {/* Testimonial Text */}
+        </div>
+      ))
+    }
+  </div>
+</div>
 
 <style>
   .bg-accent-blue-transparent {
-    background-color: rgba(0, 123, 255, 0.1); /* Accent Blue with transparency */
+    background-color: rgba(
+      0,
+      123,
+      255,
+      0.1
+    ); /* Accent Blue with transparency */
   }
   .animate-fade-in-up {
     opacity: 0;

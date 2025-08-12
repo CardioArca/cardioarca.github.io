@@ -21,5 +21,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [], // Ensure this is empty as PostCSS plugins are handled in postcss.config.cjs
 };
