@@ -1,0 +1,9 @@
+<svg width="200" height="40" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 0H0V15H15V0Z" fill="#2196F3"/>
+<path d="M30 0H15V15H30V0Z" fill="#2196F3"/>
+<path d="M15 15H0V30H15V15Z" fill="#2196F3"/>
+<path d="M30 15H15V30H30V15Z" fill="#2196F3"/>
+<rect x="35" y="5" width="115" height="20" fill="none"/>
+<text x="35" y="20" font-family="Arial, sans-serif" font-size="15" fill="#333333">MEDCARE</text>
+<text x="35" y="27" font-family="Arial, sans-serif" font-size="8" fill="#555555">HEALTH SOLUTION</text>
+</svg>

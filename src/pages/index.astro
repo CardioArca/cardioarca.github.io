@@ -1,7 +1,15 @@
 ---
 import '../styles/global.css';
+import '../styles/navbar.css';
 // Component Imports
-import Button from '../components/Button.astro';
+import Navbar from '../components/Navbar.astro';
+import HeroSection from '../components/HeroSection.astro';
+import FeatureSection from '../components/FeatureSection.astro'; // Import the new component
+import WaitlistForm from '../components/WaitlistForm.astro'; // Import the new component
+import TestimonialsSection from '../components/TestimonialsSection.astro'; // Import the new component
+import SecuritySection from '../components/SecuritySection.astro'; // Import the new component
+import CallToActionSection from '../components/CallToActionSection.astro'; // Import the new component
+import Footer from '../components/Footer.astro'; // Import the new component
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -11,15 +19,24 @@ import Button from '../components/Button.astro';
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<title>Healthcare EMR System</title>
 	</head>
 
 	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
+		<Navbar />
+		<main>
+			<HeroSection />
+            <FeatureSection /> {/* Add the feature section */}
+            <WaitlistForm /> {/* Add the waitlist form section */}
+            <TestimonialsSection /> {/* Add the testimonials section */}
+            <SecuritySection /> {/* Add the security section */}
+            <CallToActionSection /> {/* Add the call to action section */}
+  </main>
+    <Footer /> {/* Add the footer section */}
+ </body>
 </html>
