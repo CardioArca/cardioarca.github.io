@@ -1,7 +1,8 @@
 # Astro with Tailwind
 
 ```sh
-pnpm create astro@latest -- --template with-tailwindcss
+pnpm install
+pnpm dev
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
