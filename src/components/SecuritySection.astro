@@ -1,0 +1,70 @@
+---
+
+---
+
+<section
+  class="relative bg-navy-blue text-white py-20 px-4 overflow-hidden h-[50vh] flex items-center justify-center"
+>
+  {/* Background Image of Server Room */}
+  <div
+    class="absolute inset-0 z-0 bg-fixed bg-cover"
+    style="background-image: url('/assets/server-room.jpg'); background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto text-center">
+    {/* Text Content */}
+    <div class="md:w-full mb-8 md:mb-0 animate-fade-in-right">
+      <h2 class="text-5xl font-extrabold text-white mb-6">
+        Your Privacy is Our Priority
+      </h2>
+      <ul class="list-none space-y-4 text-xl mx-auto max-w-2xl">
+        <li class="animate-fade-in-right">HIPAA & GDPR Compliant Encryption</li>
+        <li class="animate-fade-in-right">Multi-factor Authentication</li>
+        <li class="animate-fade-in-right">Secure Cloud Storage</li>
+      </ul>
+    </div>
+
+    {
+      /* Placeholder for Icon Elements (will be part of text or stylized lists) */
+    }
+    <div class="md:w-full flex justify-center animate-fade-in-left">
+      {
+        /* This 'div' is primarily for controlling the animation timing and could hold more complex interactive icon elements if needed.
+          For now, icons are integrated directly into the list items. */
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-navy-blue {
+    background-color: #2196f3; /* Navy Blue */
+  }
+  .animate-fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s forwards;
+  }
+
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-right {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 1s forwards;
+  }
+
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>

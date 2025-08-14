@@ -1,0 +1,84 @@
+---
+const features = [
+  {
+    icon: "/assets/icons/history.png", // Placeholder, replace with actual icons
+    title: "Patient Medical History Management",
+    description: "Comprehensive tools for managing patient records.",
+    // image: "/src/assets/dashboard-mockup-placeholder.jpg" // Placeholder for Dashboard Mockup
+  },
+  {
+    icon: "/assets/icons/hospital.png",
+    title: "Hospital & Provider Integration",
+    description: "Seamless integration with hospitals and healthcare providers."
+  },
+  {
+    icon: "/assets/icons/file-sharing.png",
+    title: "Data Sharing",
+    description: "Secure and efficient data sharing capabilities."
+  },
+  {
+    icon: "/assets/icons/medication.png",
+    title: "Medication Management",
+    description: "Streamlined management of patient medications."
+  },
+  {
+    icon: "/assets/icons/upload.png",
+    title: "File Upload & Management",
+    description: "Easy upload and organized management of patient files."
+  },
+  {
+    icon: "/assets/icons/appointment.png",
+    title: "Appointment Scheduling",
+    description: "Intuitive system for scheduling and managing appointments."
+  },
+  {
+    icon: "/assets/icons/implant.png",
+    title: "Implant Device History",
+    description: "Detailed tracking of implant device history."
+  },
+  {
+    icon: "/assets/icons/cyber-security.png",
+    title: "Data Security & Privacy",
+    description: "Robust measures to ensure data security and patient privacy."
+  },
+  {
+    icon: "/assets/icons/data-exchange.png",
+    title: "Interoperability",
+    description: "Ensuring seamless data exchange with other systems."
+  }
+];
+---
+
+<section class="bg-white">
+  <div class="container mx-auto px-4 py-16">
+    <h2 class="text-center text-4xl font-bold text-navy-blue mb-12">Core Features</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      {features.map(feature => (
+        <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center animate-fade-in h-full transform transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
+          <img src={feature.icon} alt={feature.title} class="w-16 h-16 mb-4" /> {/* Icon */}
+          <h3 class="text-xl font-bold text-navy-blue mb-2 flex-grow">{feature.title}</h3> {/* Short Title */}
+          <p class="text-gray-600 mb-4 flex-grow">{feature.description}</p> {/* Brief Description */}
+        {/*  {feature.image && <img src={feature.image} alt={feature.title} class="mt-4 w-full h-32 object-cover rounded-md" />} { Image Placeholder */}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-navy-blue {
+    color: var(--color-navy-blue); /* Example Navy Blue */
+  }
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+</style>
