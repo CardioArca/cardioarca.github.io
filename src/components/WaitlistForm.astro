@@ -1,0 +1,157 @@
+---
+
+---
+
+<section
+  class="relative h-[70vh] flex items-center justify-center overflow-hidden"
+>
+  {/* Background Image with Overlay */}
+  <div
+    class="absolute inset-0 z-0 bg-fixed bg-cover"
+    style="background-image: url('/assets/waitlist.jpg'); background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    {/* Adjust opacity here */}
+  </div>
+
+  {/* Form Section */}
+  <div
+    class="flex items-center justify-center w-full p-2 relative z-10 animate-slide-in-right"
+  >
+    <div
+      class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-white p-10 rounded-xl shadow-2xl transform hover:scale-105 transition duration-500"
+    >
+      <h2
+        class="text-lg sm:text-xl font-extrabold text-gray-800 mb-4 text-center"
+      >
+        Join Our Wait-List
+      </h2>
+      <form id="waitlistForm" class="space-y-4">
+        <div>
+          <label
+            for="name"
+            class="block text-gray-700 text-sm font-semibold mb-1">Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="shadow-sm border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block text-gray-700 text-sm font-semibold mb-1">Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="shadow-sm border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+            placeholder="your.email@example.com"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="role"
+            class="block text-gray-700 text-sm font-semibold mb-1">Role</label
+          >
+          <div class="relative">
+            <select
+              id="role"
+              name="role"
+              class="block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-3 py-2 pr-8 rounded-lg shadow-sm leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+              required
+            >
+              <option value="">Select your role</option>
+              <option value="patient">Patient</option>
+              <option value="healthcare-provider">Healthcare Provider</option>
+              <option value="administrator">Administrator</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                ><path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                ></path></svg
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <label
+            for="comments"
+            class="block text-gray-700 text-sm font-semibold mb-1"
+            >Comments (optional)</label
+          >
+          <textarea
+            id="comments"
+            name="comments"
+            rows="3"
+            class="shadow-sm border border-gray-300 rounded-lg w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+            placeholder="Any additional comments..."></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-full shadow-lg transform transition duration-300 hover:-translate-y-1"
+          >Join the Wait List</button
+        >
+      </form>
+      <div
+        id="confirmationMessage"
+        class="mt-4 text-center text-green-600 font-semibold text-sm hidden"
+      >
+        Thank you for joining our waitlist! We’ll notify you soon.
+      </div>
+
+      <style>
+        .bg-blue-100 {
+          background-color: #e6f0fa;
+        }
+        /* Updated accent blue to a more vibrant and cohesive shade */
+        .bg-blue-600 {
+          background-color: #2563eb; /* A more prominent shade of blue */
+        }
+        .hover\:bg-blue-700:hover {
+          background-color: #1d4ed8; /* Slightly darker for hover effect */
+        }
+
+        .animate-slide-in-right {
+          transform: translateX(0); /* remove the initial transform */
+          animation: slideInRight 1s forwards;
+        }
+
+        @keyframes slideInRight {
+          to {
+            transform: translateX(0);
+          }
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const waitlistForm = document.getElementById("waitlistForm");
+          const confirmationMessage = document.getElementById(
+            "confirmationMessage"
+          );
+
+          if (waitlistForm && confirmationMessage) {
+            waitlistForm.addEventListener("submit", function (event) {
+              event.preventDefault();
+              waitlistForm.classList.add("hidden");
+              confirmationMessage.classList.remove("hidden");
+            });
+          }
+        });
+      </script>
+    </div>
+  </div>
+</section>

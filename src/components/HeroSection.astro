@@ -1,0 +1,61 @@
+---
+
+---
+
+<section class="hero-section py-28 pb-0 px-4 md:py-16 md:px-8 lg:py-20">
+  <div class="hero-overlay-responsive"></div>
+  <div
+    class="container mx-auto flex flex-col md:flex-row items-center justify-between hero-content text-center md:text-left"
+  >
+    <div class="md:w-1/2 mb-8 md:mb-0">
+      <h1
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 md:mb-6"
+      >
+        Empower Your Healthcare with Our All-in-One EMR System
+      </h1>
+      <p
+        class="text-base sm:text-lg md:text-xl mb-6 md:mb-8 max-w-lg mx-auto md:mx-0"
+      >
+        Manage records, appointments, and implants securely in one place.
+      </p>
+      <div
+        class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
+      >
+        <button
+          class="btn-primary w-full sm:w-auto text-base sm:text-lg md:text-xl py-3 px-6 rounded-lg"
+        >
+          Join the Wait List
+        </button>
+        <button
+          class="btn-secondary w-full sm:w-auto text-base sm:text-lg md:text-xl py-3 px-6 rounded-lg"
+        >
+          Request a Demo
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    min-height: 50vh; /* Adjust for mobile view */
+  }
+
+  @media (min-width: 768px) {
+    /* md breakpoint */
+    .hero-section {
+      min-height: 100vh; /* Restore for tablet and desktop */
+    }
+  }
+
+  .no-image-sm-md .hero-overlay-responsive {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    /* md breakpoint */
+    .no-image-sm-md .hero-overlay-responsive {
+      display: block;
+    }
+  }
+</style>

@@ -1,0 +1,45 @@
+<button
+  id="scrollToTopBtn"
+  title="Go to top"
+  class="hidden md:flex fixed bottom-5 right-5 p-3 rounded-full bg-navy-blue text-primary-foreground shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-opacity duration-300 opacity-0 pointer-events-none"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="h-6 w-6"
+  >
+    <path d="m5 12 7-7 7 7"></path>
+    <path d="M12 19V5"></path>
+  </svg>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    if (!scrollToTopBtn) return;
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add("opacity-100", "pointer-events-auto");
+        scrollToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+      } else {
+        scrollToTopBtn.classList.add("opacity-0", "pointer-events-none");
+        scrollToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+</script>
