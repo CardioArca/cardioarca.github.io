@@ -11,6 +11,7 @@ import SecuritySection from "../components/SecuritySection.astro"; // Import the
 import CallToActionSection from "../components/CallToActionSection.astro"; // Import the new component
 import Footer from "../components/Footer.astro"; // Import the new component
 import FAQSection from "../components/FAQSection.jsx"; // Import the new FAQ component
+import ScrollToTop from "@/components/ScrollToTop.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -45,6 +46,7 @@ import FAQSection from "../components/FAQSection.jsx"; // Import the new FAQ com
       {/* Add the security section */}
       <CallToActionSection class="mb-16" />
       <FAQSection client:load />
+      <ScrollToTop />
       {/* Add the FAQ section */}
     </main>
     <Footer />
